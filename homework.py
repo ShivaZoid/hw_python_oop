@@ -123,7 +123,7 @@ class SportsWalking(Training):
         coeff_calorie_4 (float): константа, неименованное значение.
     """
 
-    coeff_calorie_3: float = 0.035  # константа
+    coeff_calorie_3: float = 0.035
     coeff_calorie_4: float = 0.029
 
     # Пишем конструктор класса-наследника,
@@ -140,9 +140,7 @@ class SportsWalking(Training):
             weight (float): вес спортсмена.
             height (float): рост спортсмена.
         """
-        # наследуем функциональность конструктора из класса-родителя
         super().__init__(action, duration, weight)
-        # добавляем новую функциональность: свойство height
         self.height = height
 
     def get_spent_calories(self) -> float:
@@ -150,7 +148,6 @@ class SportsWalking(Training):
 
         Переопределяем родительский метод для SportsWalking.
         """
-        # помещаем метод get_mean_speed() в переменную для удобочитаемости
         avarage_speed = self.get_mean_speed()
         return ((self.coeff_calorie_3 * self.weight
                 + (avarage_speed**2 // self.height)
