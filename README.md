@@ -26,12 +26,7 @@ python -m pip install -r requirements.txt
 python manage.py migrate
 ~~~
 
-6) Создайте суперпользователя:
-~~~
-python manage.py createsuperuser
-~~~
-
-7) Запустите сервер:
+6) Запустите сервер:
 ~~~
 python manage.py runserver
 ~~~
